@@ -1,0 +1,102 @@
+:root {
+  /* Colors */
+  --containers: #5475eccc;
+  --orange: #f0c353;
+  --text: #2e2e2e;
+  --button-text: #fff;
+  --shadow: #000;
+}
+
+/*                           SPACE                              */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(var(--orange), rgb(200, 111, 28));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 95px;
+  max-width: 680px;
+  height: 30rem;
+  width: 100%;
+  background-color: rgba(119, 115, 115, 0.181);
+  box-shadow: var(--shadow) 0 4px 8px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 2px solid rgb(60, 60, 60);
+}
+
+.container p {
+  color: var(--text);
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: var(--text);
+  font-weight: bold;
+  line-height: 28px;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.container input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccccccaf;
+  box-shadow: var(--box-shadow-black);
+  border-radius: 5px;
+}
+
+button {
+  background-color: #d1d1d16d;
+  color: var(--text);
+  border: solid 1px rgba(0, 0, 0, 0.227);
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background-color: var(--containers);
+  box-shadow: var(--box-shadow-black);
+  color: var(--button-text);
+}
+
+#weatherResult {
+  margin-top: 20px;
+  color: #2e2e2e;
+}
+
+.hidden {
+  display: none;
+}
+
+#weatherResult h2,
+#weatherResult p {
+  margin: 5px 0;
+}

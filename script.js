@@ -20,13 +20,13 @@ async function getWeather() {
     const response = await fetch(url);
 
     if (!response.ok) {
-      // Handle non-200 responses (e.g., 404, city not found)
+      // Handle error 404/city not found
       throw new Error('City not found');
     }
 
     const data = await response.json();
 
-    // Display the weather data
+    // Display weather data
     weatherResultTitle.textContent = `Weather in ${data.name}`;
     weatherResultDesc.textContent = `Temperature: ${data.main.temp}°C, ${data.weather[0].description}`;
 
@@ -34,7 +34,7 @@ async function getWeather() {
     weatherResult.classList.remove('hidden');
 
   } catch (error) {
-    // Handle errors (e.g., invalid city name)
+    // Handles errors (e.g., invalid city name)
     weatherResultTitle.textContent = 'Error';
     weatherResultDesc.textContent = 'City not found. Please try again.';
     weatherResult.classList.remove('hidden');
